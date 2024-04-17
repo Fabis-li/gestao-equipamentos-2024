@@ -23,6 +23,26 @@
             repositorio.RegistrarEquipamento(equipamento);
         }
 
+        public static void Iniciar(RepositorioEquipamentos repositorio)
+        {
+            Console.WriteLine("Gestão de Equipamentos");
+            Console.WriteLine("----------------------");
+            Console.WriteLine("1 - Cadastrar Equipamentos");
+            Console.WriteLine("2 - Listar Equipamentos");
+            Console.WriteLine("3 - Editar Equipamento");
+            Console.WriteLine("4 - Excluir Equipamento");
+            Console.WriteLine("0 - Voltar ao Menu\n");
+            Console.Write("Digite uma opção: "); 
+            int opcao = Convert.ToInt32(Console.ReadLine());
+
+            switch (opcao)
+            {
+                
+            }
+                
+
+        }
+
         
 
         
