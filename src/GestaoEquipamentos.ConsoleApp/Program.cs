@@ -4,9 +4,10 @@
     {
         static void Main(string[] args)
         {
-           RepositorioEquipamentos repositorio = new RepositorioEquipamentos();
+            RepositorioEquipamentos repositorio = new RepositorioEquipamentos();
+            RepositorioChamados repositorioChamado = new RepositorioChamados();
 
-            Menu.Iniciar(repositorio);           
+            Menu.Iniciar(repositorio, repositorioChamado);           
             
         }
     }

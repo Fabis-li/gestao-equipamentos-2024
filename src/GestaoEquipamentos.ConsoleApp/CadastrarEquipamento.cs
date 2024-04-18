@@ -30,7 +30,7 @@ namespace GestaoEquipamentos.ConsoleApp
                     break;
                 case 4: ExcluirEquipamento.Iniciar(repositorio); 
                     break;
-                case 0: Menu.Iniciar(repositorio);
+                case 0: //Menu.Iniciar(repositorio);
                     break;
 
 
