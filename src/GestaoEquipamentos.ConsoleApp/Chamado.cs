@@ -7,8 +7,9 @@
         public string Descricao;
         public string Equipamento;
         public DateTime DataAbertura;
-        public int DiasEmAberto;
-
+        public int DiasEmAberto; 
+           
+        
         public Chamado()
         {
         }
@@ -20,7 +21,13 @@
             Descricao = descricao;
             Equipamento = equipamento;
             DataAbertura = dataAbertura;
-            DiasEmAberto = DiasEmAberto;
+            DiasEmAberto = CalcularDias();
+        }
+
+        public int CalcularDias()
+        {
+            TimeSpan dias = DateTime.Now - DataAbertura;
+            return (int)dias.TotalDays;
         }
 
 

@@ -11,13 +11,14 @@ namespace GestaoEquipamentos.ConsoleApp
         {
             chamados[contadorChamados] = chamado;
             contadorChamados++;
+            chamado.Id++;
         }
 
         public void ListarChamados()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("{0,-15} | {1,-15} | {2, -15} | {3, -5}",
-                    "Título", "Equipamento", "Data da Abertura", "Dias em Aberto");
+            Console.WriteLine("{0,-5} | {1,-15} | {2, -15} | {3, -15} | {4, -5}",
+                    "Id","Título", "Equipamento", "Data da Abertura", "Dias em Aberto");
             Console.ResetColor();
 
             for (int i = 0; i < chamados.Length; i++)
@@ -28,7 +29,7 @@ namespace GestaoEquipamentos.ConsoleApp
                     continue;
 
                 Console.WriteLine("{0,-5} | {1,-15} | {2, -15} | {3, -15} | {4, -5}",
-                    chamado.Id,chamado.Titulo, chamado.Equipamento, chamado.DataAbertura, chamado.DiasEmAberto);
+                    chamado.Id,chamado.Titulo, chamado.Equipamento, chamado.DataAbertura.ToShortDateString(), chamado.DiasEmAberto);
 
             }
         }

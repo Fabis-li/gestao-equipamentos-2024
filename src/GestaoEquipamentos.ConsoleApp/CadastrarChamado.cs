@@ -43,7 +43,7 @@
                 chamado.Titulo = Console.ReadLine();
                 Console.Write("Digite a descrição do chamado: ");
                 chamado.Descricao = Console.ReadLine();
-                Console.Write("Digite o nome do equipamento");
+                Console.Write("Digite o nome do equipamento: ");
                 chamado.Equipamento = Console.ReadLine();               
                 Console.Write("Digite a data da abertura: ");
                 chamado.DataAbertura = Convert.ToDateTime(Console.ReadLine());

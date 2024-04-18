@@ -27,7 +27,7 @@
                     continue;
 
                 Console.WriteLine("{0,-5} | {1,-15} | {2, -15} | {3, -15} | {4, -10} | {5,-10}",
-                    equip.Id, equip.NumeroSerie, equip.Nome, equip.PrecoAquisicao, equip.Fabricante, equip.DataFabricacao);
+                    equip.Id, equip.NumeroSerie, equip.Nome, equip.PrecoAquisicao, equip.Fabricante, equip.DataFabricacao.ToShortDateString());
 
             }
 
