@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
-            CadastrarEquipamento cadastro = new CadastrarEquipamento();
-            cadastro.ObterDados();
+           RepositorioEquipamentos repositorio = new RepositorioEquipamentos();
+
+            Menu.Iniciar(repositorio);           
             
         }
     }
