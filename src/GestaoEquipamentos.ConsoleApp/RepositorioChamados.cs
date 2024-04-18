@@ -12,6 +12,7 @@ namespace GestaoEquipamentos.ConsoleApp
             chamados[contadorChamados] = chamado;
             contadorChamados++;
             chamado.Id++;
+
         }
 
         public void ListarChamados()
@@ -29,7 +30,7 @@ namespace GestaoEquipamentos.ConsoleApp
                     continue;
 
                 Console.WriteLine("{0,-5} | {1,-15} | {2, -15} | {3, -15} | {4, -5}",
-                    chamado.Id,chamado.Titulo, chamado.Equipamento, chamado.DataAbertura.ToShortDateString(), chamado.DiasEmAberto);
+                    chamado.Id,chamado.Titulo, chamado.Equipamento, chamado.DataAbertura.ToShortDateString(), chamado.CalcularDias());
 
             }
         }

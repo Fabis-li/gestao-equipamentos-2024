@@ -20,8 +20,7 @@
             Titulo = titulo;
             Descricao = descricao;
             Equipamento = equipamento;
-            DataAbertura = dataAbertura;
-            DiasEmAberto = CalcularDias();
+            DataAbertura = dataAbertura;           
         }
 
         public int CalcularDias()
