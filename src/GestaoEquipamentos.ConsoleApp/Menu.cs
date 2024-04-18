@@ -4,7 +4,7 @@ namespace GestaoEquipamentos.ConsoleApp
 {
     public class Menu
     {
-        public static void Iniciar(RepositorioEquipamentos repositorio)
+        public static void Iniciar(RepositorioEquipamentos repositorio, RepositorioChamados repositorioChamados)
         {
             bool opcaoSairEscolhida = false;
 
@@ -18,7 +18,7 @@ namespace GestaoEquipamentos.ConsoleApp
                 switch (opcao)
                 {
                     case 1: CadastrarEquipamento.Iniciar(repositorio); break;
-                    case 2:;break;
+                    case 2:CadastrarChamado.Iniciar(repositorioChamados); break;
 
                     default: opcaoSairEscolhida=true; break;
                 }

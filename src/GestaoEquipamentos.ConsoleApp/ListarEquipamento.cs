@@ -3,8 +3,7 @@
     public static class ListarEquipamento
     {
         public static void Iniciar(RepositorioEquipamentos repositorio)
-        {
-            
+        {            
             Console.Clear();
             Console.WriteLine("Gestão de Equipamentos");
             Console.WriteLine("----------------------\n");
@@ -12,9 +11,7 @@
 
             repositorio.ListarEquipamentos();
 
-            Console.ReadLine();
-
-           
+            Console.ReadLine();       
 
         }
     }
