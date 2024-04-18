@@ -24,11 +24,9 @@
                     break;
                 case 3: EditarChamado.Iniciar(repositorio);
                     break;
-                case 4:
-                    //ExcluirChamado.Iniciar();
+                case 4: ExcluirChamado.Iniciar(repositorio);
                     break;
-                case 0:
-                    //Menu.Iniciar();
+                //case 0: Menu.Iniciar(repositorio);
                     break;
 
 
