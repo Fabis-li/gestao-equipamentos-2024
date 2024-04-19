@@ -1,4 +1,4 @@
-﻿namespace GestaoEquipamentos.ConsoleApp
+﻿namespace GestaoEquipamentos.ConsoleApp.ModuloChamado
 {
     public class CadastrarChamado
     {
@@ -18,15 +18,19 @@
 
             switch (opcao)
             {
-                case 1: CriarChamado(repositorio);
+                case 1:
+                    CriarChamado(repositorio);
                     break;
-                case 2: ListarChamados.Iniciar(repositorio);
+                case 2:
+                    ListarChamados.Iniciar(repositorio);
                     break;
-                case 3: EditarChamado.Iniciar(repositorio);
+                case 3:
+                    EditarChamado.Iniciar(repositorio);
                     break;
-                case 4: ExcluirChamado.Iniciar(repositorio);
+                case 4:
+                    ExcluirChamado.Iniciar(repositorio);
                     break;
-                //case 0: Menu.Iniciar(repositorio);
+                    //case 0: Menu.Iniciar(repositorio);
                     break;
 
 
@@ -44,7 +48,7 @@
                 Console.Write("Digite a descrição do chamado: ");
                 chamado.Descricao = Console.ReadLine();
                 Console.Write("Digite o nome do equipamento: ");
-                chamado.Equipamento = Console.ReadLine();               
+                chamado.Equipamento = Console.ReadLine();
                 Console.Write("Digite a data da abertura: ");
                 chamado.DataAbertura = Convert.ToDateTime(Console.ReadLine());
 

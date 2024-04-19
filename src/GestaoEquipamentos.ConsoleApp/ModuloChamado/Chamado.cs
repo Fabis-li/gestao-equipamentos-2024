@@ -1,4 +1,6 @@
-﻿namespace GestaoEquipamentos.ConsoleApp
+﻿using GestaoEquipamentos.ConsoleApp.Compartilhado;
+
+namespace GestaoEquipamentos.ConsoleApp.ModuloChamado
 {
     public class Chamado
     {
@@ -7,9 +9,9 @@
         public string Descricao;
         public string Equipamento;
         public DateTime DataAbertura;
-        public int DiasEmAberto; 
-           
-        
+        public int DiasEmAberto;
+
+
         public Chamado()
         {
         }
@@ -20,7 +22,7 @@
             Titulo = titulo;
             Descricao = descricao;
             Equipamento = equipamento;
-            DataAbertura = dataAbertura;           
+            DataAbertura = dataAbertura;
         }
 
         public int CalcularDias()

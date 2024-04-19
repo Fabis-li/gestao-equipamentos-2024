@@ -1,4 +1,6 @@
-﻿namespace GestaoEquipamentos.ConsoleApp
+﻿using GestaoEquipamentos.ConsoleApp.Compartilhado;
+
+namespace GestaoEquipamentos.ConsoleApp.ModuloEquipamento
 {
     public class Equipamento
     {
@@ -13,25 +15,13 @@
         {
         }
 
-        public Equipamento(int id, string nome, decimal precoAquisicao, string numeroSerie, DateTime dataFabricacao, string fabricante)
-        {
-            Id = GeradorId.GerarIdEquipamento();
+        public Equipamento(string nome, decimal precoAquisicao, string numeroSerie, DateTime dataFabricacao, string fabricante)
+        {            
             Nome = nome;
             PrecoAquisicao = precoAquisicao;
             NumeroSerie = numeroSerie;
             DataFabricacao = dataFabricacao;
             Fabricante = fabricante;
-        }      
-
-        public void ExcluirEquipamento()
-        {
-            this.Nome = "";
-            this.PrecoAquisicao = 0;
-            this.NumeroSerie = "";
-            this.DataFabricacao = DateTime.MinValue;
-            this.Fabricante = "";
         }
-
-
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace GestaoEquipamentos.ConsoleApp
+﻿namespace GestaoEquipamentos.ConsoleApp.ModuloChamado
 {
     public class ExcluirChamado
     {
@@ -18,9 +18,9 @@
             chamadoEncontrado.Id = 0;
             chamadoEncontrado.Titulo = "";
             chamadoEncontrado.Descricao = "";
-            chamadoEncontrado.DataAbertura = DateTime.MinValue; 
+            chamadoEncontrado.DataAbertura = DateTime.MinValue;
             chamadoEncontrado.DiasEmAberto = 0;
-           
+
 
             Console.ReadLine();
         }
