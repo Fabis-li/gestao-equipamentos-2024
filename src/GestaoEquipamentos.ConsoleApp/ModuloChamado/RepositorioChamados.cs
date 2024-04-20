@@ -1,6 +1,4 @@
-﻿
-
-namespace GestaoEquipamentos.ConsoleApp
+﻿namespace GestaoEquipamentos.ConsoleApp.ModuloChamado
 {
     public class RepositorioChamados
     {
@@ -19,7 +17,7 @@ namespace GestaoEquipamentos.ConsoleApp
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("{0,-5} | {1,-15} | {2, -15} | {3, -15} | {4, -5}",
-                    "Id","Título", "Equipamento", "Data da Abertura", "Dias em Aberto");
+                    "Id", "Título", "Equipamento", "Data da Abertura", "Dias em Aberto");
             Console.ResetColor();
 
             for (int i = 0; i < chamados.Length; i++)
@@ -30,7 +28,7 @@ namespace GestaoEquipamentos.ConsoleApp
                     continue;
 
                 Console.WriteLine("{0,-5} | {1,-15} | {2, -15} | {3, -15} | {4, -5}",
-                    chamado.Id,chamado.Titulo, chamado.Equipamento, chamado.DataAbertura.ToShortDateString(), chamado.CalcularDias());
+                    chamado.Id, chamado.Titulo, chamado.Equipamento, chamado.DataAbertura.ToShortDateString(), chamado.CalcularDias());
 
             }
         }

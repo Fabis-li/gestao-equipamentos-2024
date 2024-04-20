@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestaoEquipamentos.ConsoleApp
+namespace GestaoEquipamentos.ConsoleApp.ModuloChamado
 {
     public class EditarChamado
     {
@@ -30,7 +30,7 @@ namespace GestaoEquipamentos.ConsoleApp
             Console.Write("Digite o equipamento");
             chamadoEncontrado.Equipamento = Console.ReadLine();
             Console.Write("Digite o fabricante: ");
-            
+
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nChamado editado com sucesso!");

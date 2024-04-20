@@ -1,4 +1,6 @@
-﻿namespace GestaoEquipamentos.ConsoleApp
+﻿using GestaoEquipamentos.ConsoleApp.Compartilhado;
+
+namespace GestaoEquipamentos.ConsoleApp.ModuloEquipamento
 {
     public class Equipamento
     {
@@ -21,15 +23,15 @@
             NumeroSerie = numeroSerie;
             DataFabricacao = dataFabricacao;
             Fabricante = fabricante;
-        }      
+        }
 
         public void ExcluirEquipamento()
         {
-            this.Nome = "";
-            this.PrecoAquisicao = 0;
-            this.NumeroSerie = "";
-            this.DataFabricacao = DateTime.MinValue;
-            this.Fabricante = "";
+            Nome = "";
+            PrecoAquisicao = 0;
+            NumeroSerie = "";
+            DataFabricacao = DateTime.MinValue;
+            Fabricante = "";
         }
 
 

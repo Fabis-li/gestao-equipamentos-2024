@@ -1,5 +1,8 @@
 ﻿
 
+using GestaoEquipamentos.ConsoleApp.ModuloChamado;
+using GestaoEquipamentos.ConsoleApp.ModuloEquipamento;
+
 namespace GestaoEquipamentos.ConsoleApp
 {
     public class Menu

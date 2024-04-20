@@ -1,4 +1,4 @@
-﻿namespace GestaoEquipamentos.ConsoleApp
+﻿namespace GestaoEquipamentos.ConsoleApp.ModuloChamado
 {
     public static class ListarChamados
     {

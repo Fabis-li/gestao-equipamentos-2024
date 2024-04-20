@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel;
 
-namespace GestaoEquipamentos.ConsoleApp
+namespace GestaoEquipamentos.ConsoleApp.ModuloEquipamento
 {
     public class CadastrarEquipamento
-    {       
-        public RepositorioEquipamentos repositorio = new RepositorioEquipamentos(); 
-        
+    {
+        public RepositorioEquipamentos repositorio = new RepositorioEquipamentos();
+
 
         public static void Iniciar(RepositorioEquipamentos repositorio)
         {
@@ -17,18 +17,22 @@ namespace GestaoEquipamentos.ConsoleApp
             Console.WriteLine("3 - Editar Equipamento");
             Console.WriteLine("4 - Excluir Equipamento");
             Console.WriteLine("0 - Voltar ao Menu\n");
-            Console.Write("Digite uma opção: "); 
+            Console.Write("Digite uma opção: ");
             int opcao = Convert.ToInt32(Console.ReadLine());
 
             switch (opcao)
             {
-                case 1: ObterEquipamento(repositorio);                    
+                case 1:
+                    ObterEquipamento(repositorio);
                     break;
-                case 2: ListarEquipamento.Iniciar(repositorio);
+                case 2:
+                    ListarEquipamento.Iniciar(repositorio);
                     break;
-                case 3: EditarEquipamento.Iniciar(repositorio);
+                case 3:
+                    EditarEquipamento.Iniciar(repositorio);
                     break;
-                case 4: ExcluirEquipamento.Iniciar(repositorio); 
+                case 4:
+                    ExcluirEquipamento.Iniciar(repositorio);
                     break;
                 case 0: //Menu.Iniciar(repositorio);
                     break;
@@ -59,9 +63,9 @@ namespace GestaoEquipamentos.ConsoleApp
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("\nEquipamento cadastrado com sucesso!");
                 Console.ResetColor();
-                
+
             }
-            
-        }         
+
+        }
     }
 }

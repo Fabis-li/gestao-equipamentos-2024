@@ -1,6 +1,4 @@
-﻿
-
-namespace GestaoEquipamentos.ConsoleApp
+﻿namespace GestaoEquipamentos.ConsoleApp.ModuloEquipamento
 {
     public static class ExcluirEquipamento
     {
@@ -19,13 +17,13 @@ namespace GestaoEquipamentos.ConsoleApp
 
             equipamentoEncontrado.Id = 0;
             equipamentoEncontrado.NumeroSerie = "";
-            equipamentoEncontrado.Nome = "";            
+            equipamentoEncontrado.Nome = "";
             equipamentoEncontrado.PrecoAquisicao = 0;
             equipamentoEncontrado.Fabricante = "";
             equipamentoEncontrado.DataFabricacao = DateTime.MinValue;
 
             Console.ReadLine();
-            
+
         }
     }
 }

@@ -1,13 +1,13 @@
-﻿namespace GestaoEquipamentos.ConsoleApp
-{    
+﻿namespace GestaoEquipamentos.ConsoleApp.ModuloEquipamento
+{
     public class RepositorioEquipamentos
-    {      
+    {
         private static Equipamento[] equipamentos = new Equipamento[100];
-        public int contadorEquipamentos;        
+        public int contadorEquipamentos;
 
         public void RegistrarEquipamento(Equipamento equipamento)
         {
-            equipamentos[contadorEquipamentos]  = equipamento;
+            equipamentos[contadorEquipamentos] = equipamento;
             contadorEquipamentos++;
             equipamento.Id++;
         }
@@ -16,10 +16,10 @@
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("{0,-5} | {1,-15} | {2, -15} | {3, -15} | {4, -10} | {5,-10}",
-                    "Id","Número", "Nome", "Preço", "Fabricante" ,"Data de Fabricação" );
+                    "Id", "Número", "Nome", "Preço", "Fabricante", "Data de Fabricação");
             Console.ResetColor();
 
-            for (int i = 0;  i < equipamentos.Length; i++)
+            for (int i = 0; i < equipamentos.Length; i++)
             {
                 Equipamento equip = equipamentos[i];
 
@@ -39,12 +39,12 @@
             {
                 Equipamento e = equipamentos[i];
 
-                if(e == null)
+                if (e == null)
                     continue;
 
                 if (e.Id == idEscolhido)
                     return e;
-                     
+
             }
 
             return null;
