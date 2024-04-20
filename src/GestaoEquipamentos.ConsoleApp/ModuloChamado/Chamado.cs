@@ -16,9 +16,16 @@ namespace GestaoEquipamentos.ConsoleApp.ModuloChamado
         {
         }
 
+        public Chamado(string titulo, string descricao, string equipamento)
+        {
+            Titulo = titulo;
+            Descricao = descricao;
+            Equipamento = equipamento;
+            
+        }
+
         public Chamado(string titulo, string descricao, string equipamento, DateTime dataAbertura)
         {
-            Id = GeradorId.GeraIdChamado();
             Titulo = titulo;
             Descricao = descricao;
             Equipamento = equipamento;

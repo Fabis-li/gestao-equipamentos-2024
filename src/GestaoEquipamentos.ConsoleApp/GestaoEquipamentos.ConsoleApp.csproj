@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="ModuloCadastrar\**" />
+    <EmbeddedResource Remove="ModuloCadastrar\**" />
+    <None Remove="ModuloCadastrar\**" />
+  </ItemGroup>
+
 </Project>

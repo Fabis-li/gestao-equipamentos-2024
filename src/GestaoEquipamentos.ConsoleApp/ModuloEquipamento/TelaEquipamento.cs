@@ -59,14 +59,12 @@
             Console.Clear();
             Console.WriteLine("Gestão de Equipamentos");
             Console.WriteLine("----------------------\n");
-            Console.WriteLine("Editando Equipamento\n");
-
-            repositorio.ListarEquipamentos();
+            Console.WriteLine("Editando Equipamento\n");            
 
             Console.Write("\nDigite o Id do equipamento que deseja editar: ");
             int equipamentoEscolhido = Convert.ToInt32(Console.ReadLine());
 
-            if (repositorio.ExisteEquipamento(equipamentoEscolhido))
+            if (!repositorio.ExisteEquipamento(equipamentoEscolhido))
             {
                 Console.WriteLine("O equipamento não existe");
                 return;
@@ -91,7 +89,7 @@
 
             if(!conseguiuEditar)
             {
-                Console.WriteLine("Houve um errodurante a edição do equiapmento.");
+                Console.WriteLine("Houve um erro durante a edição do equiapmento.");
                 return;
             }
 

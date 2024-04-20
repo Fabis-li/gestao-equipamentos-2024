@@ -1,6 +1,5 @@
-﻿using GestaoEquipamentos.ConsoleApp.Compartilhado;
+﻿namespace GestaoEquipamentos.ConsoleApp.ModuloEquipamento
 
-namespace GestaoEquipamentos.ConsoleApp.ModuloEquipamento
 {
     public class Equipamento
     {

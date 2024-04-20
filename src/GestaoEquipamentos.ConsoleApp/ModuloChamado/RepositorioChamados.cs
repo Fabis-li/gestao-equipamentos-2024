@@ -1,16 +1,86 @@
-﻿namespace GestaoEquipamentos.ConsoleApp.ModuloChamado
+﻿using GestaoEquipamentos.ConsoleApp.Compartilhado;
+using GestaoEquipamentos.ConsoleApp.ModuloEquipamento;
+
+namespace GestaoEquipamentos.ConsoleApp.ModuloChamado
 {
     public class RepositorioChamados
     {
         private static Chamado[] chamados = new Chamado[100];
-        public int contadorChamados;
+        
+        public void CadastrarChamado(Chamado novoChamado)
+        {
+            novoChamado.Id = GeradorId.GeraIdChamado();
+
+            RegistrarChamado(novoChamado);
+        }
 
         public void RegistrarChamado(Chamado chamado)
         {
-            chamados[contadorChamados] = chamado;
-            contadorChamados++;
-            chamado.Id++;
+            for (int i = 0; i < chamados.Length; i++)
+            {
+                if (chamados[i] != null)
+                    continue;
+                else
+                {
+                    chamados[i] = chamado;
+                    break;
+                }
+            }
+        }
 
+        public bool EditarChamado(int id, Chamado novoChamado)
+        {
+            novoChamado.Id = id;
+
+            for (int i = 0; i < chamados.Length; i++)
+            {
+                if (chamados[i] == null)
+                    continue;
+                else if (chamados[i].Id == id)
+                {
+                    chamados[i] = novoChamado;
+
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool ExisteChamado(int id)
+        {
+            for (int i = 0; i < chamados.Length; i++)
+            {
+                Chamado ch = chamados[i];
+
+                if (ch == null)
+                    continue;
+
+                else if (ch.Id == id)
+                    return true;
+            }
+            return false;
+        }
+
+        public bool ExcluirChamado(int id)
+        {
+            for (int i = 0; i < chamados.Length; i++)
+            {
+                if (chamados[i] == null)
+                    continue;
+
+                else if (chamados[i].Id == id)
+                {
+                    chamados[i] = null;
+
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public Chamado[] SelecionarChamado()
+        {
+            return chamados;
         }
 
         public void ListarChamados()
